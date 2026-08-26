@@ -1,7 +1,25 @@
 aid: lula
 name: Lula
-description: 'Lula is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Lula Technologies, Inc. was a Miami, Florida insurance-infrastructure company founded by twin
+  brothers Matthew Vega-Sanz (CEO) and Michael Vega-Sanz (President). It started as the car-sharing
+  startup Lula Rides and pivoted during the COVID-19 pandemic into an API-first — widely described
+  at the time as "Stripe-like" — insurance platform for small and mid-sized car rental, car-sharing,
+  trucking and logistics fleet operators, bundling driver vetting and risk assessment, fraud
+  detection, driver-history checks, episodic/on-demand policy issuance and claims handling behind a
+  single API underwritten through licensed insurance partners. It raised an $18M Series A in July
+  2021 and a $35.5M Series B, and its public developer surface was a Postman documenter collection
+  alongside a developer portal at www.lula.is/developers. In 2024 Lula divested its insurance
+  division to Nantucket Capital Corp, a San Diego MGA, headcount fell from roughly 150 to about 19,
+  and the founders sold the company. The domain lula.is has since left the company's control — it
+  now delegates to parkingcrew.net and serves a "This domain may be for sale!" holding page — the
+  API host api.lula.is is gone, and the Postman collection returns 404. No public API surface
+  remains. NOTE FOR FUTURE PASSES — the same founders later built a SEPARATE company, Gail
+  (legal entity Nothing Technologies, Inc., meetgail.com), which does operate a live developer
+  surface; Gail is not a rename of Lula and none of its artifacts may be attributed to this
+  profile. Two other unrelated companies also trade as "Lula": Lula (lula.life, property
+  maintenance) and Lula Commerce (lulacommerce.com, convenience retail). This profile is retained
+  as a historical company record.
 url: https://raw.githubusercontent.com/api-evangelist/lula/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -10,8 +28,24 @@ x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-25'
 modified: '2026-08-25'
+x-status: acquired
+x-acquired-date: '2024'
+x-acquired-note: >-
+  Insurance division divested to Nantucket Capital Corp (San Diego MGA) in 2024; founders sold the
+  company the same year. No single acquirer of the whole entity is publicly named.
+x-website-status: parked-for-sale
+x-former-domain: lula.is
 tags:
 - Company
+- Insurance
+- Insurtech
+- Embedded Insurance
+- Car Rental
+- Car Sharing
+- Fleet Management
+- Risk Assessment
+- Claims Management
+- Logistics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +53,54 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
-- type: Website
+- type: SecondaryMarket
   url: https://forgeglobal.com/lula_stock/
+- type: SecondaryMarket
+  url: https://equityzen.com/company/lula/
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/lula
+x-pointer-liveness:
+  checked: '2026-08-25'
+  note: >-
+    Every pointer above was fetched with a browser User-Agent on 2026-08-25. Forge Global and
+    Crunchbase return 403 to our crawler — an ordinary bot challenge, not a dead page; both pages
+    demonstrably exist and are indexed. EquityZen returns 200. The original stub carried
+    https://forgeglobal.com/lula_stock/ typed as `Website`; that is a secondary-market VENUE
+    listing, not the company's own site, so it has been retyped to SecondaryMarket. No `Website`
+    pointer is emitted: lula.is is a parked for-sale page and pointing at it would assert a
+    company site that no longer exists.
+  probes:
+  - {url: 'https://forgeglobal.com/lula_stock/', status: 403, verdict: bot-challenge}
+  - {url: 'https://equityzen.com/company/lula/', status: 200, verdict: live}
+  - {url: 'https://www.crunchbase.com/organization/lula', status: 403, verdict: bot-challenge}
+  - {url: 'http://lula.is/', status: 410, verdict: parked-for-sale}
+  - {url: 'https://lula.is/', status: 0, verdict: tls-handshake-fails}
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Lula Technologies divested its insurance division to Nantucket Capital Corp and was sold by its
+    founders in 2024, and its domain has since been released rather than redirected — lula.is now
+    delegates to ns1/ns2.parkingcrew.net, serves no TLS certificate at all (the HTTPS handshake
+    fails outright), returns 410 Gone on the HTTP apex, and answers every deeper path with one
+    identical 32KB "This domain may be for sale!" holding page, so all 21 /.well-known/ and 27
+    contract-discovery probes are catch-all HTML rather than documents; the historical developer
+    portal at www.lula.is/developers was last archived on 2022-12-07 and the Postman collection
+    that was Lula's public API reference now returns 404.
+  evidence:
+  - url: http://lula.is/
+    status: 410
+  - url: http://api.lula.is/openapi.json
+    status: 200
+  - url: http://lula.is/.well-known/agent-card.json
+    status: 200
+  - url: https://documenter.getpostman.com/view/6602648/TzRRCTzg
+    status: 404
+  - url: https://equityzen.com/company/lula/
+    status: 200
+  checked: '2026-08-25'

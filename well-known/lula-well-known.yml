@@ -1,0 +1,188 @@
+name: Lula — /.well-known/ probe
+description: >-
+  Probe of the canonical /.well-known/ discovery paths on every host Lula Technologies, Inc.
+  ever operated. EVERY PATH IS A MISS. The company's domain lula.is is no longer under the
+  company's control: it now delegates to parkingcrew.net nameservers and serves a
+  "This domain may be for sale!" holding page. That holding page is a catch-all — it answers
+  HTTP 200 with the identical ~32KB text/html document for EVERY path requested, including
+  paths that never existed. None of these 200s is a document, and none earns a WellKnown or
+  SecurityTxt pointer. Recorded so the absence is measured rather than assumed.
+generated: '2026-08-25'
+method: probed
+source: >-
+  Live HTTP probes run 2026-08-25 against lula.is, www.lula.is and api.lula.is. HTTPS could not
+  be negotiated on any of the three (TLS handshake fails, SSL_ERROR_SYSCALL — no certificate is
+  served), so the probes were run over HTTP, which is what the parking host answers on. The apex
+  http://lula.is/ returns 410 Gone; every deeper path returns the 200 catch-all.
+x-host-note: >-
+  These hosts are recorded for completeness because they are the only hosts Lula ever published.
+  They are NOT a live Lula surface and nothing served from them may be attributed to the company.
+hosts:
+- host: lula.is
+  note: >-
+    Parked domain (ns1/ns2.parkingcrew.net, A 104.247.81.99). Apex returns 410 Gone; all other
+    paths return an identical 200 text/html parking page. Catch-all, not a document server.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not a security.txt.
+  - path: /.well-known/openid-configuration
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not an OpenID configuration.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not an authorization-server metadata document.
+  - path: /.well-known/api-catalog
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not an RFC 9727 api-catalog.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not an ai-plugin manifest.
+  - path: /.well-known/agent-card.json
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: >-
+      Domain-parking catch-all HTML, not an A2A Agent Card. No a2a/ artifact was written —
+      the body is not a JSON object and carries none of the AgentCard fields.
+  - path: /.well-known/agent.json
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not a legacy A2A Agent Card.
+- host: www.lula.is
+  note: Same parking host as the apex; identical catch-all behaviour on every path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/openid-configuration
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/api-catalog
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/agent-card.json
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not an A2A Agent Card.
+  - path: /.well-known/agent.json
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not a legacy A2A Agent Card.
+- host: api.lula.is
+  note: >-
+    Lula's historical API host (archived by the Wayback Machine on 2023-01-20). It now resolves
+    to the same parking IP as the apex and serves the same catch-all page. No API remains here.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/openid-configuration
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/api-catalog
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML.
+  - path: /.well-known/agent-card.json
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not an A2A Agent Card.
+  - path: /.well-known/agent.json
+    status: 200
+    result: html-catchall
+    real_document: false
+    content_type: text/html
+    note: Domain-parking catch-all HTML, not a legacy A2A Agent Card.
+x-contract-discovery:
+  note: >-
+    STEP 0b contract discovery was run against the same three hosts and missed on every path
+    for the same reason — the parking page answers 200 to everything, so no candidate parsed
+    as OpenAPI, Swagger, GraphQL SDL or an MCP tools/list response.
+  probed:
+  - {path: /openapi.json, status: 200, result: html-catchall, parses_as_spec: false}
+  - {path: /openapi.yaml, status: 200, result: html-catchall, parses_as_spec: false}
+  - {path: /swagger.json, status: 200, result: html-catchall, parses_as_spec: false}
+  - {path: /v1/openapi.json, status: 200, result: html-catchall, parses_as_spec: false}
+  - {path: /api-docs, status: 200, result: html-catchall, parses_as_spec: false}
+  - {path: /docs, status: 200, result: html-catchall, parses_as_spec: false}
+  - {path: /redoc, status: 200, result: html-catchall, parses_as_spec: false}
+  - {path: /graphql, status: 200, result: html-catchall, parses_as_spec: false}
+  - {path: /llms.txt, status: 200, result: html-catchall, parses_as_spec: false}
+  historical:
+  - note: >-
+      Lula's public API documentation was a Postman documenter collection. That collection is
+      now deleted.
+    url: https://documenter.getpostman.com/view/6602648/TzRRCTzg
+    status: 404
+  - note: >-
+      The developer portal www.lula.is/developers was last archived by the Wayback Machine on
+      2022-12-07. The last Wayback capture of lula.is at all is 2025-04-18, and it is a redirect
+      only — no content was captured after the company was sold.
+    url: https://www.lula.is/developers
+    status: 0

@@ -21,6 +21,9 @@ description: >-
   maintenance) and Lula Commerce (lulacommerce.com, convenience retail). This profile is retained
   as a historical company record.
 url: https://raw.githubusercontent.com/api-evangelist/lula/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "No public API surface remains."
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub

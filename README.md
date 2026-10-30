@@ -64,5 +64,28 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Lula is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/lula_stock/
+> **Acquired or rebranded.** This company was acquired, merged or renamed. Its API, if it still exists, is offered under another name. This profile is kept as a historical record and is not maintained or rated.
+
+Lula Technologies, Inc. was a Miami, Florida insurance-infrastructure company founded by twin brothers Matthew Vega-Sanz (CEO) and Michael Vega-Sanz (President). It started as the car-sharing startup Lula Rides and pivoted during the COVID-19 pandemic into an API-first — widely described at the time as "Stripe-like" — insurance platform for small and mid-sized car rental, car-sharing, trucking and logistics fleet operators, bundling driver vetting and risk assessment, fraud detection, driver-history checks, episodic/on-demand policy issuance and claims handling behind a single API underwritten through licensed insurance partners. It raised an $18M Series A in July 2021 and a $35.5M Series B, and its public developer surface was a Postman documenter collection alongside a developer portal at www.lula.is/developers. In 2024 Lula divested its insurance division to Nantucket Capital Corp, a San Diego MGA, headcount fell from roughly 150 to about 19, and the founders sold the company. The domain lula.is has since left the company's control — it now delegates to parkingcrew.net and serves a "This domain may be for sale!" holding page — the API host api.lula.is is gone, and the Postman collection returns 404. No public API surface remains. NOTE FOR FUTURE PASSES — the same founders later built a SEPARATE company, Gail (legal entity Nothing Technologies, Inc., meetgail.com), which does operate a live developer surface; Gail is not a rename of Lula and none of its artifacts may be attributed to this profile. Two other unrelated companies also trade as "Lula": Lula (lula.life, property maintenance) and Lula Commerce (lulacommerce.com, convenience retail). This profile is retained as a historical company record.
+
+**Areas:** Company · Insurance · Insurtech · Embedded Insurance · Car Rental · Car Sharing · Fleet Management · Risk Assessment · Claims Management · Logistics
+
+## Lula on APIs.io (historical record)
+
+Everything profiled for Lula is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lula/](https://apis.io/providers/lula/)** — or go straight to one of the APIs or properties below.
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as acquired or rebranded, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lula: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lula/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
